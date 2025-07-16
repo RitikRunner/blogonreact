@@ -1,19 +1,27 @@
-import { useState } from 'react'
+
 import './App.css'
-import Navbar from './Navbar'
-import Home from './Home'
+import Navbar from './pages/Navbar'
+import Home from './pages/Home'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import About from './pages/About'
+import Create from './pages/Create';
 
 function App() {
   
 
 
   return (
+    <Router>
     <div className='Apps'>
-        <Navbar/>
-        <div className='Content'>
-            <Home/>
-        </div>
+      <Navbar/>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/Create" element={<Create />} />
+
+      </Routes>
     </div>
+    </Router>
   )
 }
 

@@ -11,12 +11,12 @@ const Home = () => {
 
   return (
     <div className="flex justify-center items-stretch flex-col ">
-      {blogs.map((blog) => (
-  <div className="blog-preview" key={blog.id}>
+    {blogs.map((blog) => (
+      <div className="blog-preview" key={blog.id}>
     <h2 className="font-bold text-4xl text-green-600">{blog.title}</h2>
     <p>Written by {blog.author}</p>
-  </div>
-         ))}
+      </div>
+    ))}
     </div>
   )
 }
